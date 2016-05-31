@@ -31,7 +31,7 @@ kx:Widget
 kx:Host
 	a lv2:Feature .
 
-all:test
+all:test_all
 	a lv2:Plugin ;
 	lv2:minorVersion @ALLUIS_MINOR_VERSION@ ;
 	lv2:microVersion @ALLUIS_MICRO_VERSION@ ;
@@ -43,6 +43,70 @@ all:test
 	ui:ui all:ui_5_qt5 ;
 	ui:ui all:ui_6_show ;
 	ui:ui all:ui_7_kx ;
+	ui:ui all:ui_8_eo ;
+	rdfs:seeAlso <alluis.ttl> .
+
+all:test_x11_only
+	a lv2:Plugin ;
+	lv2:minorVersion @ALLUIS_MINOR_VERSION@ ;
+	lv2:microVersion @ALLUIS_MICRO_VERSION@ ;
+	lv2:binary <alluis@CMAKE_SHARED_MODULE_SUFFIX@> ;
+	ui:ui all:ui_1_x11 ;
+	rdfs:seeAlso <alluis.ttl> .
+
+all:test_gtk2_only
+	a lv2:Plugin ;
+	lv2:minorVersion @ALLUIS_MINOR_VERSION@ ;
+	lv2:microVersion @ALLUIS_MICRO_VERSION@ ;
+	lv2:binary <alluis@CMAKE_SHARED_MODULE_SUFFIX@> ;
+	ui:ui all:ui_2_gtk2 ;
+	rdfs:seeAlso <alluis.ttl> .
+
+all:test_gtk3_only
+	a lv2:Plugin ;
+	lv2:minorVersion @ALLUIS_MINOR_VERSION@ ;
+	lv2:microVersion @ALLUIS_MICRO_VERSION@ ;
+	lv2:binary <alluis@CMAKE_SHARED_MODULE_SUFFIX@> ;
+	ui:ui all:ui_3_gtk3 ;
+	rdfs:seeAlso <alluis.ttl> .
+
+all:test_qt4_only
+	a lv2:Plugin ;
+	lv2:minorVersion @ALLUIS_MINOR_VERSION@ ;
+	lv2:microVersion @ALLUIS_MICRO_VERSION@ ;
+	lv2:binary <alluis@CMAKE_SHARED_MODULE_SUFFIX@> ;
+	ui:ui all:ui_4_qt4 ;
+	rdfs:seeAlso <alluis.ttl> .
+
+all:test_qt5_only
+	a lv2:Plugin ;
+	lv2:minorVersion @ALLUIS_MINOR_VERSION@ ;
+	lv2:microVersion @ALLUIS_MICRO_VERSION@ ;
+	lv2:binary <alluis@CMAKE_SHARED_MODULE_SUFFIX@> ;
+	ui:ui all:ui_5_qt5 ;
+	rdfs:seeAlso <alluis.ttl> .
+
+all:test_show_only
+	a lv2:Plugin ;
+	lv2:minorVersion @ALLUIS_MINOR_VERSION@ ;
+	lv2:microVersion @ALLUIS_MICRO_VERSION@ ;
+	lv2:binary <alluis@CMAKE_SHARED_MODULE_SUFFIX@> ;
+	ui:ui all:ui_6_show ;
+	rdfs:seeAlso <alluis.ttl> .
+
+all:test_kx_only
+	a lv2:Plugin ;
+	lv2:minorVersion @ALLUIS_MINOR_VERSION@ ;
+	lv2:microVersion @ALLUIS_MICRO_VERSION@ ;
+	lv2:binary <alluis@CMAKE_SHARED_MODULE_SUFFIX@> ;
+	ui:ui all:ui_7_kx ;
+	rdfs:seeAlso <alluis.ttl> .
+
+all:test_eo_only
+	a lv2:Plugin ;
+	lv2:minorVersion @ALLUIS_MINOR_VERSION@ ;
+	lv2:microVersion @ALLUIS_MICRO_VERSION@ ;
+	lv2:binary <alluis@CMAKE_SHARED_MODULE_SUFFIX@> ;
 	ui:ui all:ui_8_eo ;
 	rdfs:seeAlso <alluis.ttl> .
 

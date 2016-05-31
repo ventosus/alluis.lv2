@@ -64,8 +64,96 @@ cleanup(LV2_Handle instance)
 	free(handle);
 }
 
-static const LV2_Descriptor alluis_test= {
-	.URI						= ALLUIS_TEST_URI,
+static const LV2_Descriptor alluis_test_all = {
+	.URI						= ALLUIS_TEST_ALL_URI,
+	.instantiate		= instantiate,
+	.connect_port		= connect_port,
+	.activate				= NULL,
+	.run						= run,
+	.deactivate			= NULL,
+	.cleanup				= cleanup,
+	.extension_data	= NULL 
+};
+
+static const LV2_Descriptor alluis_x11_all = {
+	.URI						= ALLUIS_TEST_X11_ONLY_URI,
+	.instantiate		= instantiate,
+	.connect_port		= connect_port,
+	.activate				= NULL,
+	.run						= run,
+	.deactivate			= NULL,
+	.cleanup				= cleanup,
+	.extension_data	= NULL 
+};
+
+static const LV2_Descriptor alluis_gtk2_all = {
+	.URI						= ALLUIS_TEST_GTK2_ONLY_URI,
+	.instantiate		= instantiate,
+	.connect_port		= connect_port,
+	.activate				= NULL,
+	.run						= run,
+	.deactivate			= NULL,
+	.cleanup				= cleanup,
+	.extension_data	= NULL 
+};
+
+static const LV2_Descriptor alluis_gtk3_all = {
+	.URI						= ALLUIS_TEST_GTK3_ONLY_URI,
+	.instantiate		= instantiate,
+	.connect_port		= connect_port,
+	.activate				= NULL,
+	.run						= run,
+	.deactivate			= NULL,
+	.cleanup				= cleanup,
+	.extension_data	= NULL 
+};
+
+static const LV2_Descriptor alluis_qt4_all = {
+	.URI						= ALLUIS_TEST_QT4_ONLY_URI,
+	.instantiate		= instantiate,
+	.connect_port		= connect_port,
+	.activate				= NULL,
+	.run						= run,
+	.deactivate			= NULL,
+	.cleanup				= cleanup,
+	.extension_data	= NULL 
+};
+
+static const LV2_Descriptor alluis_qt5_all = {
+	.URI						= ALLUIS_TEST_QT5_ONLY_URI,
+	.instantiate		= instantiate,
+	.connect_port		= connect_port,
+	.activate				= NULL,
+	.run						= run,
+	.deactivate			= NULL,
+	.cleanup				= cleanup,
+	.extension_data	= NULL 
+};
+
+static const LV2_Descriptor alluis_show_all = {
+	.URI						= ALLUIS_TEST_SHOW_ONLY_URI,
+	.instantiate		= instantiate,
+	.connect_port		= connect_port,
+	.activate				= NULL,
+	.run						= run,
+	.deactivate			= NULL,
+	.cleanup				= cleanup,
+	.extension_data	= NULL 
+};
+
+static const LV2_Descriptor alluis_kx_all = {
+	.URI						= ALLUIS_TEST_KX_ONLY_URI,
+	.instantiate		= instantiate,
+	.connect_port		= connect_port,
+	.activate				= NULL,
+	.run						= run,
+	.deactivate			= NULL,
+	.cleanup				= cleanup,
+	.extension_data	= NULL 
+};
+
+static const LV2_Descriptor alluis_eo_all = {
+	.URI						= ALLUIS_TEST_EO_ONLY_URI,
 	.instantiate		= instantiate,
 	.connect_port		= connect_port,
 	.activate				= NULL,
@@ -86,7 +174,23 @@ lv2_descriptor(uint32_t index)
 	switch(index)
 	{
 		case 0:
-			return &alluis_test;
+			return &alluis_test_all;
+		case 1:
+			return &alluis_x11_all;
+		case 2:
+			return &alluis_gtk2_all;
+		case 3:
+			return &alluis_gtk3_all;
+		case 4:
+			return &alluis_qt4_all;
+		case 5:
+			return &alluis_qt5_all;
+		case 6:
+			return &alluis_show_all;
+		case 7:
+			return &alluis_kx_all;
+		case 8:
+			return &alluis_eo_all;
 
 		default:
 			return NULL;

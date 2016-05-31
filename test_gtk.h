@@ -70,7 +70,7 @@ cleanup(LV2UI_Handle instance)
 {
 	handle_t *handle = instance;
 
-	if(handle->label)
+	if(handle->label && GTK_IS_WIDGET(handle->label))
 		gtk_widget_destroy(handle->label);
 	free(handle);
 }
