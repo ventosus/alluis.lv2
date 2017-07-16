@@ -39,13 +39,10 @@ all:ui_5_qt5
 	a ui:Qt5UI .
 
 all:ui_6_show
-	a ui:UI ;
+	a all:UI ;
 	lv2:requiredFeature ui:idleInterface ;
 	lv2:extensionData ui:idleInterface, ui:showInterface .
 
 all:ui_7_kx
 	a kx:Widget ;
 	lv2:requiredFeature kx:Host .
-
-all:ui_8_eo
-	a ui:EoUI .

@@ -152,17 +152,6 @@ static const LV2_Descriptor alluis_kx_all = {
 	.extension_data	= NULL 
 };
 
-static const LV2_Descriptor alluis_eo_all = {
-	.URI						= ALLUIS_TEST_EO_ONLY_URI,
-	.instantiate		= instantiate,
-	.connect_port		= connect_port,
-	.activate				= NULL,
-	.run						= run,
-	.deactivate			= NULL,
-	.cleanup				= cleanup,
-	.extension_data	= NULL 
-};
-
 #ifdef _WIN32
 __declspec(dllexport)
 #else
@@ -189,8 +178,6 @@ lv2_descriptor(uint32_t index)
 			return &alluis_show_all;
 		case 7:
 			return &alluis_kx_all;
-		case 8:
-			return &alluis_eo_all;
 
 		default:
 			return NULL;

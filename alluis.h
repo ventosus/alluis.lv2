@@ -31,7 +31,6 @@
 #define ALLUIS_TEST_QT5_ONLY_URI	ALLUIS_URI"#test_qt5_only"
 #define ALLUIS_TEST_SHOW_ONLY_URI	ALLUIS_URI"#test_show_only"
 #define ALLUIS_TEST_KX_ONLY_URI		ALLUIS_URI"#test_kx_only"
-#define ALLUIS_TEST_EO_ONLY_URI		ALLUIS_URI"#test_eo_only"
 
 #define ALLUIS_TEST_X11_URI				ALLUIS_URI"#ui_1_x11"
 #define ALLUIS_TEST_GTK2_URI			ALLUIS_URI"#ui_2_gtk2"
@@ -40,6 +39,5 @@
 #define ALLUIS_TEST_QT5_URI				ALLUIS_URI"#ui_5_qt5"
 #define ALLUIS_TEST_SHOW_URI			ALLUIS_URI"#ui_6_show"
 #define ALLUIS_TEST_KX_URI				ALLUIS_URI"#ui_7_kx"
-#define ALLUIS_TEST_EO_URI				ALLUIS_URI"#ui_8_eo"
 
 #endif // _ALLUIS_LV2_H

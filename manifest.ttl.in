@@ -22,14 +22,15 @@
 @prefix all:	<http://open-music-kontrollers.ch/lv2/alluis#> .
 
 # to please sord_validate
-ui:EoUI
-	a rdfs:Class, owl:Class ;
-	rdfs:subClassOf ui:UI .
 kx:Widget
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf ui:UI .
 kx:Host
 	a lv2:Feature .
+
+all:UI
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf ui:UI .
 
 all:test_all
 	a lv2:Plugin ;
@@ -43,7 +44,6 @@ all:test_all
 	ui:ui all:ui_5_qt5 ;
 	ui:ui all:ui_6_show ;
 	ui:ui all:ui_7_kx ;
-	ui:ui all:ui_8_eo ;
 	rdfs:seeAlso <alluis.ttl> .
 
 all:test_x11_only
@@ -102,14 +102,6 @@ all:test_kx_only
 	ui:ui all:ui_7_kx ;
 	rdfs:seeAlso <alluis.ttl> .
 
-all:test_eo_only
-	a lv2:Plugin ;
-	lv2:minorVersion @ALLUIS_MINOR_VERSION@ ;
-	lv2:microVersion @ALLUIS_MICRO_VERSION@ ;
-	lv2:binary <alluis@CMAKE_SHARED_MODULE_SUFFIX@> ;
-	ui:ui all:ui_8_eo ;
-	rdfs:seeAlso <alluis.ttl> .
-
 all:ui_1_x11
 	a ui:X11UI ;
 	ui:binary <alluis_x11@CMAKE_SHARED_MODULE_SUFFIX@> ;
@@ -136,16 +128,11 @@ all:ui_5_qt5
 	rdfs:seeAlso <alluis_ui.ttl> .
 
 all:ui_6_show
-	a ui:UI ;
+	a all:UI ;
 	ui:binary <alluis_show@CMAKE_SHARED_MODULE_SUFFIX@> ;
 	rdfs:seeAlso <alluis_ui.ttl> .
 
 all:ui_7_kx
 	a kx:Widget ;
 	ui:binary <alluis_kx@CMAKE_SHARED_MODULE_SUFFIX@> ;
-	rdfs:seeAlso <alluis_ui.ttl> .
-
-all:ui_8_eo
-	a ui:EoUI ;
-	ui:binary <alluis_eo@CMAKE_SHARED_MODULE_SUFFIX@> ;
 	rdfs:seeAlso <alluis_ui.ttl> .

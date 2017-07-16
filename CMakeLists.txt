@@ -38,8 +38,6 @@ pkg_search_module(QT5CORE REQUIRED Qt5Core) # Qt5Core
 pkg_search_module(QT5WIDGETS REQUIRED Qt5Widgets) # Qt5Widgets
 pkg_search_module(QT5GUI REQUIRED Qt5Gui) # Qt5Gui
 
-pkg_search_module(ELM REQUIRED elementary>=1.8) # Elementery
-
 add_library(alluis MODULE
 	test.c)
 set_target_properties(alluis PROPERTIES PREFIX "")
@@ -79,25 +77,17 @@ target_include_directories(alluis_qt4 PUBLIC ${QT4GUI_INCLUDE_DIRS})
 set_target_properties(alluis_qt4 PROPERTIES PREFIX "")
 install(TARGETS alluis_qt4 DESTINATION ${DEST})
 
-add_library(alluis_qt5 MODULE
-	test_qt5.cpp)
-target_link_libraries(alluis_qt5
-	${QT5CORE_LDFLAGS}
-	${QT5WIDGETS_LDFLAGS}
-	${QT5GUI_LDFLAGS})
-target_include_directories(alluis_qt5 PUBLIC ${QT5CORE_INCLUDE_DIRS})
-target_include_directories(alluis_qt5 PUBLIC ${QT5WIDGETS_INCLUDE_DIRS})
-target_include_directories(alluis_qt5 PUBLIC ${QT5GUI_INCLUDE_DIRS})
-set_target_properties(alluis_qt5 PROPERTIES PREFIX "")
-install(TARGETS alluis_qt5 DESTINATION ${DEST})
-
-add_library(alluis_eo MODULE
-	test_eo.c)
-target_link_libraries(alluis_eo
-	${ELM_LDFLAGS})
-target_include_directories(alluis_eo PUBLIC ${ELM_INCLUDE_DIRS})
-set_target_properties(alluis_eo PROPERTIES PREFIX "")
-install(TARGETS alluis_eo DESTINATION ${DEST})
+#add_library(alluis_qt5 MODULE
+#	test_qt5.cpp)
+#target_link_libraries(alluis_qt5
+#	${QT5CORE_LDFLAGS}
+#	${QT5WIDGETS_LDFLAGS}
+#	${QT5GUI_LDFLAGS})
+#target_include_directories(alluis_qt5 PUBLIC ${QT5CORE_INCLUDE_DIRS})
+#target_include_directories(alluis_qt5 PUBLIC ${QT5WIDGETS_INCLUDE_DIRS})
+#target_include_directories(alluis_qt5 PUBLIC ${QT5GUI_INCLUDE_DIRS})
+#set_target_properties(alluis_qt5 PROPERTIES PREFIX "")
+#install(TARGETS alluis_qt5 DESTINATION ${DEST})
 
 add_library(alluis_show MODULE
 	test_show.c)
