@@ -17,7 +17,6 @@
 @prefix doap:	<http://usefulinc.com/ns/doap#> .
 @prefix lv2:	<http://lv2plug.in/ns/lv2core#> .
 
-@prefix lic:	<http://opensource.org/licenses/> .
 @prefix omk:	<http://open-music-kontrollers.ch/ventosus#> .
 @prefix proj:	<http://open-music-kontrollers.ch/lv2/> .
 @prefix all:	<http://open-music-kontrollers.ch/lv2/alluis#> .
@@ -40,7 +39,7 @@ all:test_all
 	a lv2:Plugin ,
 		lv2:ConstantPlugin ;
 	doap:name "All UIs Test all UIs" ;
-	doap:license lic:Artistic-2.0 ;
+	doap:license <https://spdx.org/licenses/Artistic-2.0> ;
 	lv2:project proj:alluis ;
 
 	lv2:port [
@@ -65,7 +64,7 @@ all:test_x11_only
 	a lv2:Plugin ,
 		lv2:ConstantPlugin ;
 	doap:name "All UIs Test ui:X11UI only" ;
-	doap:license lic:Artistic-2.0 ;
+	doap:license <https://spdx.org/licenses/Artistic-2.0> ;
 	lv2:project proj:alluis ;
 
 	lv2:port [
@@ -90,7 +89,7 @@ all:test_gtk2_only
 	a lv2:Plugin ,
 		lv2:ConstantPlugin ;
 	doap:name "All UIs Test ui:GtkUI only" ;
-	doap:license lic:Artistic-2.0 ;
+	doap:license <https://spdx.org/licenses/Artistic-2.0> ;
 	lv2:project proj:alluis ;
 
 	lv2:port [
@@ -115,7 +114,7 @@ all:test_gtk3_only
 	a lv2:Plugin ,
 		lv2:ConstantPlugin ;
 	doap:name "All UIs Test ui:Gtk3UI only" ;
-	doap:license lic:Artistic-2.0 ;
+	doap:license <https://spdx.org/licenses/Artistic-2.0> ;
 	lv2:project proj:alluis ;
 
 	lv2:port [
@@ -140,7 +139,7 @@ all:test_qt4_only
 	a lv2:Plugin ,
 		lv2:ConstantPlugin ;
 	doap:name "All UIs Test ui:Qt4UI only" ;
-	doap:license lic:Artistic-2.0 ;
+	doap:license <https://spdx.org/licenses/Artistic-2.0> ;
 	lv2:project proj:alluis ;
 
 	lv2:port [
@@ -165,7 +164,7 @@ all:test_qt5_only
 	a lv2:Plugin ,
 		lv2:ConstantPlugin ;
 	doap:name "All UIs Test ui:Qt5UI only" ;
-	doap:license lic:Artistic-2.0 ;
+	doap:license <https://spdx.org/licenses/Artistic-2.0> ;
 	lv2:project proj:alluis ;
 
 	lv2:port [
@@ -190,7 +189,7 @@ all:test_show_only
 	a lv2:Plugin ,
 		lv2:ConstantPlugin ;
 	doap:name "All UIs Test ui:showInterface only" ;
-	doap:license lic:Artistic-2.0 ;
+	doap:license <https://spdx.org/licenses/Artistic-2.0> ;
 	lv2:project proj:alluis ;
 
 	lv2:port [
@@ -215,7 +214,7 @@ all:test_kx_only
 	a lv2:Plugin ,
 		lv2:ConstantPlugin ;
 	doap:name "All UIs Test kx:Widget only" ;
-	doap:license lic:Artistic-2.0 ;
+	doap:license <https://spdx.org/licenses/Artistic-2.0> ;
 	lv2:project proj:alluis ;
 
 	lv2:port [
